@@ -1,0 +1,961 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.portfolio-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - 78px);
+  min-height: calc(100svh - 78px);
+  overflow: hidden;
+  padding: 80px 0 32px;
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+}
+
+.portfolio-hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero-row {
+  min-height: 570px;
+  row-gap: 55px;
+}
+
+/* =========================================
+   BACKGROUND EFFECTS
+========================================= */
+
+.portfolio-hero-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.portfolio-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 52px 52px;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    transparent 100%
+  );
+}
+
+.portfolio-hero-orb {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.14;
+}
+
+.portfolio-hero-orb-one {
+  top: -170px;
+  left: -170px;
+  background: var(--portfolio-primary);
+}
+
+.portfolio-hero-orb-two {
+  top: 70px;
+  right: -180px;
+  background: var(--portfolio-secondary);
+  opacity: 0.11;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-hero-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 34px;
+  padding: 9px 13px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 50px;
+  background: rgba(56, 189, 248, 0.055);
+  color: var(--portfolio-secondary);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.portfolio-hero-status-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.65);
+}
+
+.portfolio-hero-eyebrow {
+  margin: 0 0 8px;
+  color: var(--portfolio-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.portfolio-hero-title {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(64px, 7vw, 94px);
+  font-weight: 700;
+  line-height: 0.99;
+  letter-spacing: -5px;
+}
+
+.portfolio-hero-gradient {
+  background: linear-gradient(
+    110deg,
+    #a5b4fc 0%,
+    #818cf8 35%,
+    #38bdf8 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.portfolio-hero-period {
+  color: var(--portfolio-secondary);
+  -webkit-text-fill-color: var(--portfolio-secondary);
+}
+
+.portfolio-hero-subtitle {
+  margin: 28px 0 18px;
+  color: var(--portfolio-text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(23px, 2.6vw, 33px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -1px;
+}
+
+.portfolio-hero-subtitle span {
+  color: var(--portfolio-secondary);
+}
+
+.portfolio-hero-description {
+  max-width: 560px;
+  margin: 0;
+  color: var(--portfolio-muted);
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* =========================================
+   TECHNOLOGY CHIPS
+========================================= */
+
+.portfolio-hero-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.portfolio-hero-tech-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 31px;
+  padding: 6px 11px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 500;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.portfolio-hero-tech-chip:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.07);
+  color: var(--portfolio-secondary);
+}
+
+/* =========================================
+   CALL TO ACTION BUTTONS
+========================================= */
+
+.portfolio-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 32px;
+}
+
+.portfolio-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.portfolio-hero-btn svg {
+  font-size: 17px;
+  transition: transform 0.25s ease;
+}
+
+.portfolio-hero-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.portfolio-hero-btn-primary {
+  background: linear-gradient(110deg, #6366f1, #4f7df3);
+  box-shadow: 0 8px 28px rgba(99, 102, 241, 0.2);
+  color: #fff;
+}
+
+.portfolio-hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 34px rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+.portfolio-hero-btn-secondary {
+  border-color: var(--portfolio-border);
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--portfolio-text);
+}
+
+.portfolio-hero-btn-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(56, 189, 248, 0.07);
+  color: var(--portfolio-secondary);
+}
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.portfolio-hero-social-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 37px;
+}
+
+.portfolio-hero-social-label {
+  color: var(--portfolio-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.portfolio-hero-social-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--portfolio-border);
+}
+
+.portfolio-hero-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--portfolio-border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--portfolio-muted);
+  font-size: 17px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.portfolio-hero-social-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--portfolio-secondary);
+}
+
+.portfolio-hero-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  color: var(--portfolio-text);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.portfolio-hero-contact-link svg {
+  color: var(--portfolio-secondary);
+  transition: transform 0.2s ease;
+}
+
+.portfolio-hero-contact-link:hover {
+  color: var(--portfolio-secondary);
+}
+
+.portfolio-hero-contact-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   RIGHT SIDE DEVELOPER VISUAL
+========================================= */
+
+.portfolio-hero-visual-column {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 490px;
+  isolation: isolate;
+}
+
+.portfolio-hero-visual-glow {
+  position: absolute;
+  z-index: -1;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.2),
+    rgba(56, 189, 248, 0.12)
+  );
+  filter: blur(75px);
+}
+
+/* Main code card */
+
+.portfolio-hero-code-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 440px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 17px;
+  background: rgba(17, 24, 39, 0.91);
+  box-shadow:
+    0 30px 85px rgba(0, 0, 0, 0.35),
+    0 0 55px rgba(99, 102, 241, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: perspective(1200px) rotateY(-3deg) rotateX(1deg);
+  transition: transform 0.35s ease;
+}
+
+.portfolio-hero-code-card:hover {
+  transform: perspective(1200px) rotateY(0deg) rotateX(0deg)
+    translateY(-4px);
+}
+
+.portfolio-hero-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 53px;
+  gap: 12px;
+  padding: 0 17px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.portfolio-hero-window-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.portfolio-hero-window-controls span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.portfolio-hero-window-controls span:nth-child(1) {
+  background: #fb7185;
+}
+
+.portfolio-hero-window-controls span:nth-child(2) {
+  background: #fbbf24;
+}
+
+.portfolio-hero-window-controls span:nth-child(3) {
+  background: #34d399;
+}
+
+.portfolio-hero-code-filename {
+  overflow: hidden;
+  color: var(--portfolio-muted);
+  font-family: monospace;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.portfolio-hero-code-header-icon {
+  flex-shrink: 0;
+  color: var(--portfolio-secondary);
+  font-size: 17px;
+}
+
+/* Code lines */
+
+.portfolio-hero-code-body {
+  padding: 23px 12px 25px;
+  overflow-x: auto;
+}
+
+.portfolio-hero-code-line {
+  display: flex;
+  align-items: baseline;
+  min-height: 25px;
+  gap: 15px;
+  white-space: pre;
+}
+
+.portfolio-hero-code-line code {
+  color: #cbd5e1;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.8;
+  white-space: pre;
+}
+
+.portfolio-code-number {
+  width: 20px;
+  flex-shrink: 0;
+  color: #475569;
+  font-family: monospace;
+  font-size: 10px;
+  text-align: right;
+  user-select: none;
+}
+
+.portfolio-code-purple {
+  color: #c4b5fd;
+}
+
+.portfolio-code-blue {
+  color: #7dd3fc;
+}
+
+.portfolio-code-green {
+  color: #86efac;
+}
+
+.portfolio-code-orange {
+  color: #fda4af;
+}
+
+.portfolio-hero-code-gap {
+  margin-top: 12px;
+}
+
+/* Code card footer */
+
+.portfolio-hero-code-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 15px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.portfolio-hero-code-footer > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--portfolio-muted);
+  font-size: 9px;
+}
+
+.portfolio-hero-code-footer > span svg {
+  color: var(--portfolio-secondary);
+  font-size: 13px;
+}
+
+.portfolio-hero-code-live > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
+}
+
+/* =========================================
+   FLOATING TECH CARDS
+========================================= */
+
+.portfolio-hero-float-card {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 145px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.19);
+  border-radius: 13px;
+  background: rgba(21, 28, 43, 0.94);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.23);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: portfolio-hero-float 5s ease-in-out infinite;
+}
+
+.portfolio-hero-float-card > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.portfolio-hero-float-card strong {
+  color: var(--portfolio-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.portfolio-hero-float-card small {
+  color: var(--portfolio-muted);
+  font-size: 10px;
+}
+
+.portfolio-hero-float-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.portfolio-hero-java-icon {
+  background: rgba(251, 146, 60, 0.12);
+  color: #fb923c;
+}
+
+.portfolio-hero-react-icon {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+.portfolio-hero-float-java {
+  top: 52px;
+  left: -23px;
+}
+
+.portfolio-hero-float-react {
+  right: -20px;
+  bottom: 58px;
+  animation-delay: -2.5s;
+}
+
+/* Small visual labels */
+
+.portfolio-hero-side-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--portfolio-muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  opacity: 0.75;
+}
+
+.portfolio-hero-side-label span:first-child {
+  color: var(--portfolio-secondary);
+}
+
+.portfolio-hero-side-label-top {
+  top: 5px;
+  right: 18px;
+}
+
+.portfolio-hero-side-label-bottom {
+  bottom: 10px;
+  left: 0;
+}
+
+/* =========================================
+   SCROLL HINT
+========================================= */
+
+.portfolio-hero-scroll {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.portfolio-hero-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--portfolio-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.portfolio-hero-scroll-link svg {
+  color: var(--portfolio-secondary);
+  font-size: 15px;
+  animation: portfolio-hero-scroll-bounce 1.7s ease-in-out infinite;
+}
+
+.portfolio-hero-scroll-link:hover {
+  color: var(--portfolio-text);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes portfolio-hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes portfolio-hero-scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .portfolio-hero {
+    min-height: auto;
+    padding-top: 65px;
+  }
+
+  .portfolio-hero-row {
+    min-height: auto;
+    row-gap: 45px;
+  }
+
+  .portfolio-hero-content {
+    text-align: center;
+  }
+
+  .portfolio-hero-availability {
+    margin-bottom: 27px;
+  }
+
+  .portfolio-hero-title {
+    font-size: clamp(65px, 10vw, 88px);
+  }
+
+  .portfolio-hero-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .portfolio-hero-tech-list,
+  .portfolio-hero-actions,
+  .portfolio-hero-social-row {
+    justify-content: center;
+  }
+
+  .portfolio-hero-contact-link {
+    margin-left: 0;
+  }
+
+  .portfolio-hero-visual {
+    min-height: 440px;
+  }
+
+  .portfolio-hero-code-card {
+    max-width: 440px;
+  }
+
+  .portfolio-hero-float-java {
+    left: max(0px, calc(50% - 260px));
+  }
+
+  .portfolio-hero-float-react {
+    right: max(0px, calc(50% - 260px));
+  }
+
+  .portfolio-hero-side-label-top {
+    right: max(0px, calc(50% - 250px));
+  }
+
+  .portfolio-hero-side-label-bottom {
+    left: max(0px, calc(50% - 250px));
+  }
+
+  .portfolio-hero-scroll {
+    margin-top: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+  .portfolio-hero {
+    padding: 48px 0 28px;
+  }
+
+  .portfolio-hero-row {
+    row-gap: 32px;
+  }
+
+  .portfolio-hero-availability {
+    gap: 8px;
+    margin-bottom: 25px;
+    padding: 8px 11px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .portfolio-hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .portfolio-hero-title {
+    font-size: clamp(58px, 16vw, 76px);
+    letter-spacing: -3.5px;
+  }
+
+  .portfolio-hero-subtitle {
+    margin-top: 22px;
+    font-size: clamp(21px, 5.5vw, 27px);
+    letter-spacing: -0.7px;
+  }
+
+  .portfolio-hero-description {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .portfolio-hero-tech-list {
+    gap: 7px;
+    margin-top: 22px;
+  }
+
+  .portfolio-hero-tech-chip {
+    min-height: 29px;
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+
+  .portfolio-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+    margin-top: 27px;
+  }
+
+  .portfolio-hero-btn {
+    width: 100%;
+    min-height: 47px;
+  }
+
+  .portfolio-hero-social-row {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .portfolio-hero-social-label {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .portfolio-hero-contact-link {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .portfolio-hero-visual {
+    min-height: 350px;
+    margin: 0 -4px;
+  }
+
+  .portfolio-hero-visual-glow {
+    width: 230px;
+    height: 230px;
+    filter: blur(60px);
+  }
+
+  .portfolio-hero-code-card {
+    max-width: 100%;
+    border-radius: 13px;
+    transform: none;
+  }
+
+  .portfolio-hero-code-card:hover {
+    transform: none;
+  }
+
+  .portfolio-hero-code-header {
+    min-height: 45px;
+    padding: 0 12px;
+  }
+
+  .portfolio-hero-code-body {
+    padding: 18px 9px;
+  }
+
+  .portfolio-hero-code-line {
+    gap: 9px;
+  }
+
+  .portfolio-hero-code-line code {
+    font-size: clamp(8px, 2.4vw, 10px);
+  }
+
+  .portfolio-code-number {
+    width: 16px;
+    font-size: 9px;
+  }
+
+  .portfolio-hero-code-footer {
+    padding: 9px 10px;
+  }
+
+  .portfolio-hero-code-footer > span {
+    font-size: 8px;
+  }
+
+  .portfolio-hero-float-card {
+    min-width: 120px;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 11px;
+  }
+
+  .portfolio-hero-float-icon {
+    width: 31px;
+    height: 31px;
+    font-size: 16px;
+  }
+
+  .portfolio-hero-float-card strong {
+    font-size: 10px;
+  }
+
+  .portfolio-hero-float-card small {
+    font-size: 9px;
+  }
+
+  .portfolio-hero-float-java {
+    top: 8px;
+    left: 0;
+  }
+
+  .portfolio-hero-float-react {
+    right: 0;
+    bottom: 5px;
+  }
+
+  .portfolio-hero-side-label {
+    display: none;
+  }
+
+  .portfolio-hero-scroll {
+    margin-top: 15px;
+  }
+
+  .portfolio-hero-scroll-link {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-hero *,
+  .portfolio-hero *::before,
+  .portfolio-hero *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

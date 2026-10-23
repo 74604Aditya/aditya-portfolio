@@ -1,0 +1,323 @@
+
+/* =========================================
+   EDUCATION SECTION
+   All classes are scoped to education.
+========================================= */
+
+.portfolio-education-section {
+  --education-cyan: #22d3ee;
+  --education-violet: #8b5cf6;
+  --education-muted: #94a3b8;
+  --education-border: rgba(148, 163, 184, 0.17);
+
+  width: 100%;
+  padding: clamp(64px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.portfolio-education-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.portfolio-education-heading {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.portfolio-education-eyebrow {
+  display: inline-block;
+  color: var(--education-cyan);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.portfolio-education-heading h2 {
+  margin: 16px 0;
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.4px;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-education-heading h2 span {
+  background: linear-gradient(
+    110deg,
+    var(--education-cyan),
+    var(--education-violet)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.portfolio-education-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--education-muted);
+  line-height: 1.8;
+}
+
+/* Education cards */
+
+.portfolio-education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.portfolio-education-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid var(--education-border);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.55);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.portfolio-education-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.portfolio-education-violet:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.portfolio-education-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.portfolio-education-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  border-radius: 13px;
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--education-cyan);
+  font-size: 1.35rem;
+}
+
+.portfolio-education-violet .portfolio-education-icon {
+  border-color: rgba(139, 92, 246, 0.25);
+  background: rgba(139, 92, 246, 0.09);
+  color: var(--education-violet);
+}
+
+.portfolio-education-period {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  max-width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--education-border);
+  border-radius: 9px;
+  color: var(--education-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.portfolio-education-period svg {
+  flex-shrink: 0;
+  color: var(--education-cyan);
+}
+
+.portfolio-education-type {
+  margin-bottom: 10px;
+  color: var(--education-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portfolio-education-violet .portfolio-education-type {
+  color: var(--education-violet);
+}
+
+.portfolio-education-card h3 {
+  margin: 0 0 14px;
+  color: var(--portfolio-text, #f8fafc);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 750;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-education-card h4 {
+  margin: 0 0 12px;
+  color: #cbd5e1;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-education-affiliation {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 16px;
+  color: var(--education-muted);
+  font-size: 0.83rem;
+  line-height: 1.7;
+}
+
+.portfolio-education-affiliation svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--education-cyan);
+}
+
+.portfolio-education-description {
+  flex: 1;
+  margin: 0;
+  color: var(--education-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.portfolio-education-result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--education-border);
+}
+
+.portfolio-education-result svg {
+  color: var(--education-cyan);
+}
+
+.portfolio-education-result span {
+  flex: 1;
+  color: var(--education-muted);
+  font-size: 0.84rem;
+}
+
+.portfolio-education-result strong {
+  color: var(--education-cyan);
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+/* Continuous learning callout */
+
+.portfolio-education-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 32px;
+  padding: clamp(22px, 4vw, 30px);
+  border: 1px solid var(--education-border);
+  border-radius: 17px;
+  background: linear-gradient(
+    110deg,
+    rgba(34, 211, 238, 0.05),
+    rgba(139, 92, 246, 0.07)
+  );
+}
+
+.portfolio-education-note-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--education-violet);
+  font-size: 1.3rem;
+}
+
+.portfolio-education-note h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.portfolio-education-note p {
+  margin: 0;
+  color: var(--education-muted);
+  line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 767.98px) {
+  .portfolio-education-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .portfolio-education-heading {
+    margin-bottom: 36px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .portfolio-education-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .portfolio-education-heading h2 {
+    letter-spacing: -0.8px;
+  }
+
+  .portfolio-education-card {
+    padding: 21px 17px;
+    border-radius: 15px;
+  }
+
+  .portfolio-education-card-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-education-period {
+    font-size: 0.75rem;
+  }
+
+  .portfolio-education-note {
+    gap: 12px;
+    padding: 20px 16px;
+  }
+
+  .portfolio-education-note-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-education-section *,
+  .portfolio-education-section *::before,
+  .portfolio-education-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

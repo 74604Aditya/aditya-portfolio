@@ -1,0 +1,1045 @@
+
+/* =========================================
+   ABOUT SECTION — DEVELOPER COLLAGE
+   Scoped styles: about-*
+========================================= */
+
+.about-section {
+  --about-cyan: #38bdf8;
+  --about-violet: #a78bfa;
+  --about-green: #4ade80;
+  --about-orange: #fb923c;
+
+  --about-surface: var(--portfolio-card, #151c2b);
+  --about-border: var(
+    --portfolio-border,
+    rgba(148, 163, 184, 0.16)
+  );
+  --about-heading: var(--portfolio-text, #f1f5f9);
+  --about-muted: var(--portfolio-muted, #94a3b8);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding-inline: clamp(20px, 6vw, 40px);
+}
+
+/* =========================================
+   BACKGROUND DECORATIONS
+========================================= */
+
+.about-background-orb {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  opacity: 0.12;
+}
+
+.about-orb-one {
+  top: 12%;
+  left: -180px;
+  background: var(--about-cyan);
+}
+
+.about-orb-two {
+  top: 40%;
+  right: -190px;
+  background: var(--about-violet);
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.about-heading {
+  max-width: 720px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--about-cyan);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+}
+
+.about-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--about-cyan);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.75);
+}
+
+.about-heading .portfolio-section-title {
+  margin-bottom: 18px;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: -0.045em;
+}
+
+.about-heading .portfolio-section-subtitle {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* =========================================
+   COLLAGE GRID
+========================================= */
+
+.about-collage {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "profile profile profile profile profile profile tech tech tech tech tech tech"
+    "profile profile profile profile profile profile tech tech tech tech tech tech"
+    "mindset mindset mindset mindset security security security security security security security security"
+    "capabilities capabilities capabilities capabilities capabilities capabilities capabilities capabilities capabilities capabilities capabilities capabilities";
+  gap: 20px;
+  align-items: stretch;
+}
+
+.about-profile-card,
+.about-tech-card,
+.about-mindset-card,
+.about-security-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--about-border);
+  border-radius: 24px;
+  background: var(--about-surface);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.about-profile-card {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: clamp(24px, 3.4vw, 40px);
+  background:
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(99, 102, 241, 0.15),
+      transparent 48%
+    ),
+    var(--about-surface);
+}
+
+.about-profile-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.about-card-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--about-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.about-card-label svg {
+  color: var(--about-cyan);
+  font-size: 1rem;
+}
+
+.about-profile-symbol {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  border-radius: 14px;
+  color: var(--about-cyan);
+  background: rgba(56, 189, 248, 0.08);
+  font-size: 1.3rem;
+}
+
+.about-profile-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding-top: 45px;
+}
+
+.about-profile-kicker {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--about-violet);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.about-profile-content h3 {
+  margin: 0 0 20px;
+  color: var(--about-heading);
+  font-size: clamp(1.8rem, 3.1vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.about-profile-content h3 span {
+  color: var(--about-cyan);
+}
+
+.about-profile-content p {
+  max-width: 490px;
+  margin: 0 0 25px;
+  color: var(--about-muted);
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+.about-github-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  color: var(--about-cyan);
+  font-size: 0.91rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.about-github-link:hover {
+  color: var(--about-violet);
+}
+
+.about-github-link:focus-visible {
+  outline: 2px solid var(--about-cyan);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.about-link-arrow {
+  transition: transform 0.25s ease;
+}
+
+.about-github-link:hover .about-link-arrow {
+  transform: translate(3px, -3px);
+}
+
+.about-profile-watermark {
+  position: absolute;
+  right: -6px;
+  bottom: 55px;
+  color: rgba(148, 163, 184, 0.055);
+  font-family: monospace;
+  font-size: clamp(7rem, 15vw, 12rem);
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-profile-decoration {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(56, 189, 248, 0.13);
+  border-radius: 28px;
+  pointer-events: none;
+  transform: rotate(32deg);
+}
+
+.about-decoration-one {
+  top: 90px;
+  right: 60px;
+}
+
+.about-decoration-two {
+  top: 115px;
+  right: 85px;
+  border-color: rgba(167, 139, 250, 0.15);
+}
+
+/* =========================================
+   TECHNOLOGY COLLAGE CARD
+========================================= */
+
+.about-tech-card {
+  grid-area: tech;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  min-height: 420px;
+  padding: clamp(22px, 3vw, 32px);
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(56, 189, 248, 0.10),
+      transparent 45%
+    ),
+    var(--about-surface);
+}
+
+.about-tech-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-mini-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(167, 139, 250, 0.24);
+  border-radius: 14px;
+  color: var(--about-violet);
+  background: rgba(167, 139, 250, 0.09);
+  font-size: 1.3rem;
+}
+
+.about-tech-heading h3 {
+  margin: 0 0 5px;
+  color: var(--about-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.about-tech-heading p {
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 0.82rem;
+}
+
+.about-tech-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 12px 10px;
+  padding: 32px 0;
+}
+
+.about-tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 10px 13px;
+  border: 1px solid var(--about-border);
+  border-radius: 12px;
+  color: var(--about-heading);
+  background: rgba(148, 163, 184, 0.045);
+  font-size: 0.79rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-tech-tag:hover {
+  transform: translateY(-3px);
+  background: rgba(56, 189, 248, 0.07);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.about-tech-tag-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--about-cyan);
+}
+
+.about-tech-tag-2 .about-tech-tag-dot {
+  background: var(--about-violet);
+}
+
+.about-tech-tag-3 .about-tech-tag-dot {
+  background: var(--about-green);
+}
+
+.about-tech-tag-4 .about-tech-tag-dot {
+  background: var(--about-orange);
+}
+
+.about-tech-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 17px;
+  border-top: 1px solid var(--about-border);
+  color: var(--about-muted);
+  font-size: 0.76rem;
+}
+
+.about-tech-footer svg {
+  color: var(--about-green);
+  font-size: 1rem;
+}
+
+/* =========================================
+   ENGINEERING MINDSET CARD
+========================================= */
+
+.about-mindset-card {
+  grid-area: mindset;
+  min-height: 275px;
+  padding: clamp(22px, 3vw, 30px);
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(167, 139, 250, 0.12),
+      transparent 45%
+    ),
+    var(--about-surface);
+}
+
+.about-mindset-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 14px;
+  color: var(--about-violet);
+  background: rgba(167, 139, 250, 0.10);
+  font-size: 1.35rem;
+}
+
+.about-mindset-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 15px 0 18px;
+  color: var(--about-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.about-mindset-divider {
+  width: 42px;
+  height: 3px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--about-violet),
+    var(--about-cyan)
+  );
+}
+
+.about-mindset-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 11px;
+  color: var(--about-muted);
+  font-size: 0.84rem;
+}
+
+.about-mindset-point svg {
+  flex-shrink: 0;
+  color: var(--about-green);
+  font-size: 1rem;
+}
+
+.about-mindset-watermark {
+  position: absolute;
+  right: 15px;
+  bottom: -15px;
+  color: rgba(167, 139, 250, 0.07);
+  font-family: monospace;
+  font-size: 7rem;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+/* =========================================
+   SECURITY CARD
+========================================= */
+
+.about-security-card {
+  grid-area: security;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 275px;
+  padding: clamp(22px, 3vw, 32px);
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(74, 222, 128, 0.10),
+      transparent 45%
+    ),
+    var(--about-surface);
+}
+
+.about-security-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.about-security-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(74, 222, 128, 0.20);
+  border-radius: 14px;
+  color: var(--about-green);
+  background: rgba(74, 222, 128, 0.08);
+  font-size: 1.3rem;
+}
+
+.about-security-label {
+  color: var(--about-muted);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.about-security-card h3 {
+  max-width: 420px;
+  margin: 0 0 12px;
+  color: var(--about-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.about-security-card p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.about-security-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.about-security-tags span {
+  padding: 7px 10px;
+  border: 1px solid rgba(74, 222, 128, 0.19);
+  border-radius: 8px;
+  color: var(--about-green);
+  background: rgba(74, 222, 128, 0.055);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+/* =========================================
+   CAPABILITY STRIP
+========================================= */
+
+.about-capability-strip {
+  grid-area: capabilities;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.about-capability-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--about-border);
+  border-radius: 18px;
+  background: var(--about-surface);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.about-capability-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.about-capability-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.15rem;
+}
+
+.capability-backend {
+  color: var(--about-cyan);
+  background: rgba(56, 189, 248, 0.09);
+}
+
+.capability-data {
+  color: var(--about-violet);
+  background: rgba(167, 139, 250, 0.09);
+}
+
+.capability-cloud {
+  color: var(--about-orange);
+  background: rgba(251, 146, 60, 0.09);
+}
+
+.about-capability-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.about-capability-item strong {
+  color: var(--about-heading);
+  font-size: 0.87rem;
+  font-weight: 750;
+}
+
+.about-capability-item div span {
+  color: var(--about-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   PROFESSIONAL HIGHLIGHTS
+========================================= */
+
+.about-focus {
+  margin-top: 100px;
+}
+
+.about-focus-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.about-focus-heading .about-eyebrow {
+  margin-bottom: 13px;
+}
+
+.about-focus-heading h3 {
+  margin: 0;
+  color: var(--about-heading);
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+}
+
+.about-focus-heading > p {
+  max-width: 380px;
+  margin: 0;
+  color: var(--about-muted);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-highlight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 265px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--about-border);
+  border-radius: 20px;
+  background: var(--about-surface);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.about-highlight-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.about-highlight-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.about-highlight-icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--about-border);
+  border-radius: 14px;
+  color: var(--about-cyan);
+  background: rgba(56, 189, 248, 0.08);
+  font-size: 1.3rem;
+}
+
+.about-highlight-number {
+  color: var(--about-muted);
+  font-family: monospace;
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.about-highlight-card h4 {
+  margin: 0 0 12px;
+  color: var(--about-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.about-highlight-card p {
+  margin: 0 0 22px;
+  color: var(--about-muted);
+  font-size: 0.83rem;
+  line-height: 1.85;
+}
+
+.about-highlight-line {
+  width: 38px;
+  height: 3px;
+  margin-top: auto;
+  border-radius: 10px;
+  background: var(--about-cyan);
+  transition: width 0.28s ease;
+}
+
+.about-highlight-card:hover .about-highlight-line {
+  width: 70px;
+}
+
+.about-highlight-violet .about-highlight-icon {
+  color: var(--about-violet);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.about-highlight-violet .about-highlight-line {
+  background: var(--about-violet);
+}
+
+.about-highlight-green .about-highlight-icon {
+  color: var(--about-green);
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.about-highlight-green .about-highlight-line {
+  background: var(--about-green);
+}
+
+.about-highlight-orange .about-highlight-icon {
+  color: var(--about-orange);
+  background: rgba(251, 146, 60, 0.08);
+}
+
+.about-highlight-orange .about-highlight-line {
+  background: var(--about-orange);
+}
+
+/* =========================================
+   RESPONSIVE: LAPTOPS
+========================================= */
+
+@media (max-width: 1199.98px) {
+  .about-collage {
+    gap: 16px;
+  }
+
+  .about-profile-card,
+  .about-tech-card {
+    min-height: 400px;
+  }
+
+  .about-highlight-card {
+    padding: 20px;
+  }
+
+  .about-capability-item {
+    padding: 16px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE: TABLETS
+========================================= */
+
+@media (max-width: 991.98px) {
+  .about-heading {
+    margin-bottom: 42px;
+  }
+
+  .about-collage {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-areas:
+      "profile profile profile profile profile profile"
+      "tech tech tech tech tech tech"
+      "mindset mindset mindset security security security"
+      "capabilities capabilities capabilities capabilities capabilities capabilities";
+  }
+
+  .about-profile-card {
+    min-height: 370px;
+  }
+
+  .about-tech-card {
+    min-height: 300px;
+  }
+
+  .about-tech-cloud {
+    padding: 25px 0;
+  }
+
+  .about-mindset-card,
+  .about-security-card {
+    min-height: 300px;
+  }
+
+  .about-focus {
+    margin-top: 75px;
+  }
+
+  .about-focus-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .about-focus-heading > p {
+    max-width: 600px;
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   RESPONSIVE: MOBILE
+========================================= */
+
+@media (max-width: 575.98px) {
+  .about-heading {
+    margin-bottom: 32px;
+    padding-inline: 5px;
+  }
+
+  .about-heading .portfolio-section-title {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .about-heading .portfolio-section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .about-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+  }
+
+  .about-collage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "profile"
+      "tech"
+      "mindset"
+      "security"
+      "capabilities";
+    gap: 14px;
+  }
+
+  .about-profile-card {
+    min-height: 380px;
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .about-profile-content {
+    padding-top: 40px;
+  }
+
+  .about-profile-content h3 {
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+  }
+
+  .about-profile-content p {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .about-profile-watermark {
+    right: -5px;
+    bottom: 60px;
+    font-size: 7rem;
+  }
+
+  .about-decoration-one {
+    top: 85px;
+    right: 32px;
+  }
+
+  .about-decoration-two {
+    top: 105px;
+    right: 52px;
+  }
+
+  .about-tech-card {
+    min-height: 280px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .about-tech-cloud {
+    gap: 10px 8px;
+    padding: 25px 0;
+  }
+
+  .about-tech-tag {
+    padding: 9px 10px;
+    font-size: 0.74rem;
+  }
+
+  .about-mindset-card,
+  .about-security-card {
+    min-height: auto;
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .about-mindset-card {
+    padding-bottom: 28px;
+  }
+
+  .about-security-card {
+    padding-block: 26px;
+  }
+
+  .about-capability-strip {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .about-capability-item {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .about-capability-item div span {
+    font-size: 0.8rem;
+  }
+
+  .about-focus {
+    margin-top: 62px;
+  }
+
+  .about-focus-heading {
+    margin-bottom: 24px;
+  }
+
+  .about-focus-heading h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-focus-heading > p {
+    font-size: 0.87rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .about-highlight-card {
+    min-height: 220px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .about-highlight-top {
+    margin-bottom: 20px;
+  }
+
+  .about-highlight-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .about-highlight-card p {
+    font-size: 0.86rem;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY & MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section *,
+  .about-section *::before,
+  .about-section *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .about-section .about-highlight-card:hover,
+  .about-section .about-capability-item:hover,
+  .about-section .about-tech-tag:hover {
+    transform: none;
+  }
+}

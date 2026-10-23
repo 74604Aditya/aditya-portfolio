@@ -1,0 +1,40 @@
+.portfolio-app {
+width: 100%;
+min-height: 100vh;
+background: var(--portfolio-bg);
+color: var(--portfolio-text);
+overflow-x: clip;
+}
+
+.portfolio-app main {
+width: 100%;
+min-height: 60vh;
+}
+
+/* =========================================
+RESPONSIVE LAYOUT
+========================================= */
+
+/* Tablets and smaller screens */
+@media (max-width: 991.98px) {
+.portfolio-app {
+overflow-x: clip;
+}
+
+.portfolio-app main {
+min-height: auto;
+}
+}
+
+/* Mobile devices */
+@media (max-width: 575.98px) {
+.portfolio-app {
+width: 100%;
+min-height: 100vh;
+}
+
+.portfolio-app main {
+width: 100%;
+min-height: auto;
+}
+}

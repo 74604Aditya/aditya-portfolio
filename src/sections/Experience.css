@@ -1,0 +1,491 @@
+
+/* =========================================
+   EXPERIENCE SECTION
+   All classes are scoped to experience.
+========================================= */
+
+.portfolio-experience-section {
+  --experience-cyan: #22d3ee;
+  --experience-violet: #8b5cf6;
+  --experience-muted: #94a3b8;
+  --experience-border: rgba(148, 163, 184, 0.17);
+
+  width: 100%;
+  padding: clamp(64px, 8vw, 100px) 0;
+  overflow: hidden;
+}
+
+.portfolio-experience-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.portfolio-experience-heading {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.portfolio-experience-eyebrow {
+  display: inline-block;
+  color: var(--experience-cyan);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.portfolio-experience-heading h2 {
+  margin: 16px 0;
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1.4px;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-experience-heading h2 span {
+  background: linear-gradient(
+    110deg,
+    var(--experience-cyan),
+    var(--experience-violet)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.portfolio-experience-heading p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--experience-muted);
+  line-height: 1.8;
+}
+
+/* Timeline */
+
+.portfolio-experience-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.portfolio-experience-timeline::before {
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  left: 26px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--experience-cyan),
+    var(--experience-violet),
+    transparent
+  );
+  content: "";
+}
+
+.portfolio-experience-item {
+  position: relative;
+  min-width: 0;
+  padding-left: 76px;
+}
+
+.portfolio-experience-marker {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  border-radius: 14px;
+  background: #0f172a;
+  color: var(--experience-cyan);
+  font-size: 1.2rem;
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.08);
+}
+
+.portfolio-experience-violet .portfolio-experience-marker {
+  border-color: rgba(139, 92, 246, 0.5);
+  color: var(--experience-violet);
+}
+
+.portfolio-experience-card {
+  min-width: 0;
+  padding: clamp(22px, 4vw, 32px);
+  border: 1px solid var(--experience-border);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.55);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.portfolio-experience-card:hover {
+  border-color: rgba(34, 211, 238, 0.35);
+  transform: translateY(-3px);
+}
+
+.portfolio-experience-violet .portfolio-experience-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.portfolio-experience-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.portfolio-experience-title-group {
+  min-width: 0;
+}
+
+.portfolio-experience-type {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--experience-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.portfolio-experience-violet .portfolio-experience-type {
+  color: var(--experience-violet);
+}
+
+.portfolio-experience-title-group h3 {
+  margin: 0 0 8px;
+  color: var(--portfolio-text, #f8fafc);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 750;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-experience-title-group h4 {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-experience-period {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--experience-border);
+  border-radius: 9px;
+  color: var(--experience-cyan);
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-align: center;
+}
+
+.portfolio-experience-location {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--experience-muted);
+  font-size: 0.82rem;
+}
+
+.portfolio-experience-description {
+  margin: 18px 0;
+  color: var(--experience-muted);
+  line-height: 1.8;
+}
+
+.portfolio-experience-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 20px;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.portfolio-experience-list li {
+  padding-left: 4px;
+}
+
+.portfolio-experience-list li::marker {
+  color: var(--experience-cyan);
+}
+
+.portfolio-experience-violet .portfolio-experience-list li::marker {
+  color: var(--experience-violet);
+}
+
+/* Technology tags */
+
+.portfolio-experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.portfolio-experience-tech span {
+  max-width: 100%;
+  padding: 7px 11px;
+  border: 1px solid var(--experience-border);
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.05);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  overflow-wrap: anywhere;
+}
+
+/* Project highlights */
+
+.portfolio-experience-projects {
+  margin-top: 80px;
+}
+
+.portfolio-experience-subheading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.portfolio-experience-subheading-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--experience-border);
+  border-radius: 13px;
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--experience-violet);
+  font-size: 1.3rem;
+}
+
+.portfolio-experience-subheading h3 {
+  margin: 7px 0 0;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-weight: 750;
+}
+
+.portfolio-experience-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid var(--experience-border);
+  border-radius: 17px;
+  background: rgba(15, 23, 42, 0.55);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.portfolio-experience-project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.45);
+}
+
+.portfolio-experience-project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  border-radius: 13px;
+  background: rgba(34, 211, 238, 0.09);
+  color: var(--experience-cyan);
+  font-size: 1.4rem;
+}
+
+.portfolio-experience-project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 14px;
+  color: var(--experience-muted);
+  font-size: 0.78rem;
+}
+
+.portfolio-experience-project-card h4 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-experience-project-card p {
+  flex: 1;
+  margin: 0;
+  color: var(--experience-muted);
+  line-height: 1.75;
+}
+
+.portfolio-experience-project-card .portfolio-experience-tech {
+  margin-top: 20px;
+}
+
+/* GitHub call to action */
+
+.portfolio-experience-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 48px;
+  padding: 28px;
+  border: 1px solid var(--experience-border);
+  border-radius: 17px;
+  background: linear-gradient(
+    115deg,
+    rgba(34, 211, 238, 0.06),
+    rgba(139, 92, 246, 0.08)
+  );
+}
+
+.portfolio-experience-cta h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.portfolio-experience-cta p {
+  margin: 0;
+  color: var(--experience-muted);
+  line-height: 1.7;
+}
+
+.portfolio-experience-github-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 10px;
+  color: var(--experience-cyan);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.portfolio-experience-github-link:hover {
+  border-color: var(--experience-cyan);
+  background: rgba(34, 211, 238, 0.08);
+}
+
+/* Tablet */
+
+@media (max-width: 767.98px) {
+  .portfolio-experience-card-top {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .portfolio-experience-period {
+    align-self: flex-start;
+  }
+
+  .portfolio-experience-projects {
+    margin-top: 56px;
+  }
+
+  .portfolio-experience-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+  .portfolio-experience-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .portfolio-experience-heading {
+    margin-bottom: 36px;
+  }
+
+  .portfolio-experience-heading h2 {
+    letter-spacing: -0.8px;
+  }
+
+  .portfolio-experience-timeline {
+    gap: 22px;
+  }
+
+  .portfolio-experience-timeline::before {
+    left: 17px;
+  }
+
+  .portfolio-experience-item {
+    padding-left: 48px;
+  }
+
+  .portfolio-experience-marker {
+    top: 18px;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    font-size: 1rem;
+  }
+
+  .portfolio-experience-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .portfolio-experience-title-group h4 {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-experience-list {
+    padding-left: 17px;
+    font-size: 0.9rem;
+  }
+
+  .portfolio-experience-tech span {
+    font-size: 0.73rem;
+  }
+
+  .portfolio-experience-project-card {
+    padding: 20px;
+  }
+
+  .portfolio-experience-cta {
+    padding: 20px;
+  }
+
+  .portfolio-experience-github-link {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-experience-section *,
+  .portfolio-experience-section *::before,
+  .portfolio-experience-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
