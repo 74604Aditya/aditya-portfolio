@@ -1,5 +1,5 @@
-# Aditya Lande | Full Stack Developer Portfolio
 
+<<<<<<< HEAD
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
@@ -124,3 +124,5 @@ Full Stack Developer | Java | Spring Boot | React
 ## License
 
 Portfolio content, branding, and original assets belong to their respective owners. Please contact me before reusing original portfolio materials.
+=======
+>>>>>>> origin/main
