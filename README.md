@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> ...
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 # Aditya Lande | Full Stack Developer Portfolio
 
 <p align="center">
@@ -28,35 +8,30 @@ If you are developing a production application, we recommend using TypeScript wi
 </p>
 
 <p align="center">
-  A modern, responsive developer portfolio showcasing my technical skills, projects, professional experience, and education.
+  A responsive developer portfolio showcasing my skills, projects, professional experience, and education.
 </p>
 
 <p align="center">
   <a href="https://github.com/74604Aditya">GitHub</a> •
   <a href="https://www.linkedin.com/in/adityablande14/">LinkedIn</a> •
-  <a href="mailto:aditya14.lande@gmail.com">Email Me</a>
+  <a href="mailto:aditya14.lande@gmail.com">Email</a>
 </p>
 
 ---
 
-## About the Project
+## About
 
-This repository contains my personal developer portfolio, built to present my software development journey, technical expertise, and projects in a clean and interactive interface.
+This portfolio presents my software development experience and technical skills, with a focus on Java, Spring Boot, React, REST APIs, databases, and modern web application development.
 
-I focus on building maintainable web applications, developing RESTful APIs, integrating frontend and backend systems, and creating reliable software solutions.
+## Features
 
-### Highlights
-
-- Responsive design for desktop, tablet, and mobile devices.
-- Dark-themed interface with modern visual styling.
-- Dedicated sections for About, Skills, Projects, Experience, Education, and Contact.
+- Responsive interface for desktop, tablet, and mobile.
+- Dark theme with modern visual styling.
+- Dedicated About, Skills, Projects, Experience, Education, and Contact sections.
 - Interactive navigation and project exploration.
-- Social links to GitHub and LinkedIn.
-- Resume access directly from the portfolio.
+- Resume access and professional social links.
 - Contact form integration using EmailJS.
-- Component-based architecture using React.
-- Scoped CSS styles to keep section styling organized.
-- Docker and local Kubernetes deployment as a planned learning and deployment step.
+- React component-based architecture and organized CSS.
 
 ## Tech Stack
 
@@ -64,20 +39,88 @@ I focus on building maintainable web applications, developing RESTful APIs, inte
 |---|---|
 | Frontend | React.js, JavaScript, HTML5, CSS3 |
 | Build Tool | Vite |
-| UI & Styling | Bootstrap, custom CSS, responsive layouts |
+| Styling | Bootstrap, custom CSS |
 | Icons | React Icons |
 | Contact Form | EmailJS |
 | Version Control | Git, GitHub |
-| Containerization | Docker — planned |
-| Orchestration | Kubernetes with kind — planned |
+| Containerization | Docker (learning stage) |
+| Orchestration | Kubernetes with kind (learning stage) |
 
-## Portfolio Sections
+## Getting Started
 
-- **Home:** Introduction, professional profile, and social links.
-- **About:** Development interests and areas of expertise.
-- **Skills:** Languages, frameworks, databases, tools, and technologies.
-- **Projects:** Selected software projects and their technical details.
-- **Experience:** Professional experience and responsibilities.
-- **Education:** Academic qualifications.
-- **Contact:** Contact form and professional contact information.
->>>>>>> 9ae72e56c89e1bbd6f843fb854da571fd3ec0fe9
+### Prerequisites
+
+- Node.js compatible with the project's Vite version
+- npm
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/74604Aditya/aditya-portfolio.git
+cd aditya-portfolio
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure EmailJS
+
+Create a `.env` file in the project root and add the variable names expected by your application:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Replace the placeholders with your EmailJS configuration. If your code uses different variable names, use those names instead.
+
+Never commit your local `.env` file or private credentials.
+
+### 4. Run the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal, usually `http://localhost:5173`.
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+Vite generates the production build in the `dist/` directory.
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+## Deployment Roadmap
+
+1. **Git and GitHub:** Version control and source-code hosting.
+2. **Docker:** Package the application into a container served by Nginx.
+3. **Local Kubernetes:** Deploy the container locally using kind.
+4. **Amazon EKS:** Explore managed Kubernetes deployment while monitoring AWS costs.
+
+**Cost note:** Amazon EKS is not generally free for continuous use. Cluster, compute, networking, storage, and other charges may apply. Local Docker and kind are suitable for learning without cloud infrastructure charges.
+
+## Contact
+
+**Aditya Lande**  
+Full Stack Developer | Java | Spring Boot | React
+
+- Email: [aditya14.lande@gmail.com](mailto:aditya14.lande@gmail.com)
+- GitHub: [74604Aditya](https://github.com/74604Aditya)
+- LinkedIn: [adityablande14](https://www.linkedin.com/in/adityablande14/)
+
+## License
+
+Portfolio content, branding, and original assets belong to their respective owners. Please contact me before reusing original portfolio materials.
